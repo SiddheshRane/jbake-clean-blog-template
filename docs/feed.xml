@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clean blog</title>
-    <link>https://SiddheshRane.github.io</link>
-    <atom:link href="https://SiddheshRane.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <description>A blog about stuff that I do</description>
+    <link>https://SiddheshRane.github.io/jbake-clean-blog-template</link>
+    <atom:link href="https://SiddheshRane.github.io/jbake-clean-blog-template/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Blog description</description>
     <language>en-gb</language>
-    <pubDate>Tue, 13 Jun 2017 13:03:22 +0530</pubDate>
-    <lastBuildDate>Tue, 13 Jun 2017 13:03:22 +0530</lastBuildDate>
+    <pubDate>Thu, 15 Jun 2017 17:52:37 +0530</pubDate>
+    <lastBuildDate>Thu, 15 Jun 2017 17:52:37 +0530</lastBuildDate>
 
     <item>
       <title>Fourth Post</title>
-      <link>https://SiddheshRane.github.io/blog/2013/fourth-post.html</link>
+      <link>https://SiddheshRane.github.io/jbake-clean-blog-template/blog/2013/fourth-post.html</link>
       <pubDate>Thu, 17 Oct 2013 00:00:00 +0530</pubDate>
       <guid isPermaLink="false">blog/2013/fourth-post.html</guid>
       <description><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.</p></description>	  
     </item><item>
       <title>Third Post</title>
-      <link>https://SiddheshRane.github.io/blog/2013/third-post.html</link>
+      <link>https://SiddheshRane.github.io/jbake-clean-blog-template/blog/2013/third-post.html</link>
       <pubDate>Thu, 26 Sep 2013 00:00:00 +0530</pubDate>
       <guid isPermaLink="false">blog/2013/third-post.html</guid>
       <description><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.</p></description>	  
     </item><item>
       <title>Second Post</title>
-      <link>https://SiddheshRane.github.io/blog/2013/second-post.html</link>
+      <link>https://SiddheshRane.github.io/jbake-clean-blog-template/blog/2013/second-post.html</link>
       <pubDate>Sun, 25 Aug 2013 00:00:00 +0530</pubDate>
       <guid isPermaLink="false">blog/2013/second-post.html</guid>
       <description><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.</p></description>	  
     </item><item>
       <title>First Post</title>
-      <link>https://SiddheshRane.github.io/blog/2013/first-post.html</link>
+      <link>https://SiddheshRane.github.io/jbake-clean-blog-template/blog/2013/first-post.html</link>
       <pubDate>Wed, 24 Jul 2013 00:00:00 +0530</pubDate>
       <guid isPermaLink="false">blog/2013/first-post.html</guid>
       <description><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.</p></description>	  

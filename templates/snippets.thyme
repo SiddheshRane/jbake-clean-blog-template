@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head th:fragment="head">
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
         <title th:with="title=(${content.title} ?: ${config.site_title})" th:text="${title}">Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="" th:content="${content.description} ?: ${config.site_description}">
@@ -29,7 +29,7 @@
         <link th:with="rootpath=(${content.rootpath} ?: '' )" rel="shortcut icon" th:href="${rootpath}+'favicon.ico'"/>
     </head>
 
-    <body style="background-color: #101010">
+    <body>
         <nav class="navbar navbar-default navbar-custom navbar-fixed-top" th:fragment="navbar">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,22 +62,114 @@
             </div>
             <!-- /.container -->
         </nav>
-        <!-- The folowing fragment will extract the first paragraph from the given string. Usage in index of=${post.body} to get a snippet instead of the whole post -->
-        <p th:fragment="firstPara(of)"
-           th:with="
-           pstart=${#strings.indexOf(of, '<p')}  ,
-           pend=${#strings.indexOf(of,'</p')} ,
-           summary=${ pend lt 0 ? 'No summary available' : #strings.substring(of,pstart,pend) + '</p>'}"
-           th:utext='${summary}' th:remove="tag">The first &lt;p&gt; element of <code>of</code> will appear here
-        </p>
+        <header class="intro-header" style="background-image: url('../assets/img/yosemite.jpg') ; background-color: #101010" 
+                th:style="|background-image: url('${content.rootpath}img/yosemite.jpg') ; background-color:#101010|">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="site-heading">
+                            <h1 th:text='${config.site_title}'>Snippets</h1>
+                            <hr class="small" />
+                            <span class="subheading" th:text='${config.site_description}'>Use for fragments inclusion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-        <div th:each="post : ${posts}" th:with='last_month=null' th:remove='tag'>
-            <h3 th:if='${last_month!=#dates.format(post.date,"MMMM yyyy")}' th:text='${#dates.format(post.date,"MMMM yyyy")}'>June 2014</h3>
+      <!-- The folowing fragment will extract the first paragraph from the given string. Usage in index of=${post.body} to get a snippet instead of the whole post -->
+                        <p th:fragment="firstPara(of)"
+                           th:with="
+                           pstart=${#strings.indexOf(of, '<p')}  ,
+                           pend=${#strings.indexOf(of,'</p')} ,
+                           summary=${ pend lt 0 ? 'No summary available' : #strings.substring(of,pstart,pend) + '</p>'}"
+                           th:utext='${summary}' th:remove="tag">The first &lt;p&gt; element of <code>of</code> will appear here
+                        </p>
 
-            <h4><span th:text='${#dates.format(post.date,"dd")}' th:remove='tag'/> - <a th:href="${content.rootpath+post.uri}" th:text='${post.title}' href="foo.html">Post title</a></h4>
-            <span th:remove='all' th:with='last_month = ${#dates.format(post.date,"MMMM yyyy")}'/>
-        </div>
+                        Share <ul class="list-inline" style="display: inline"><!-- Social Share Button HTML -->
+                            <!-- Twitter -->
+                            <li><a th:href="|//twitter.com/share?url=${config.site_host}/${post.noExtensionUri} ?: ${post.uri}&text=${post.title}&via=${config.sidebar_social_twitter}|" target="_blank" class="share-btn twitter">
+                                    <i class="fa fa-twitter"></i>
 
+                                </a></li>
+
+                            <!-- Google Plus -->
+                            <li><a th:href="|//plus.google.com/share?url=${config.site_host}/${post.noExtensionUri} ?: ${post.uri}|" target="_blank" class="share-btn google-plus">
+                                    <i class="fa fa-google-plus"></i>
+
+                                </a></li>
+
+                            <!-- Facebook -->
+                            <li><a th:href="|//www.facebook.com/sharer/sharer.php?u=${config.site_host}/${post.noExtensionUri} ?: ${post.uri}|" target="_blank" class="share-btn facebook">
+                                    <i class="fa fa-facebook"></i>
+
+                                </a></li>
+
+                            <!-- Reddit (url, title) -->
+                            <li><a th:href="|//reddit.com/submit?url=${config.site_host}/${post.noExtensionUri} ?: ${post.uri}&title=${post.title}|" target="_blank" class="share-btn reddit">
+                                    <i class="fa fa-reddit-alien"></i>
+
+                                </a></li>
+
+                            <!-- LinkedIn -->
+                            <li><a th:href="|//www.linkedin.com/shareArticle?url=${config.site_host}/${post.noExtensionUri} ?: ${post.uri}&title=${post.title}|" target="_blank" class="share-btn linkedin">
+                                    <i class="fa fa-linkedin"></i>
+
+                                </a></li>
+
+                            <!-- StumbleUpon (url, title) -->
+                            <li><a th:href="|//www.stumbleupon.com/submit?url=${config.site_host}/${post.noExtensionUri} ?: ${post.uri}&title=${post.title}|" target="_blank" class="share-btn stumbleupon">
+                                    <i class="fa fa-stumbleupon"></i>
+
+                                </a></li>
+
+                            <!-- Email -->
+                            <li><a th:href="|mailto:?subject=Check out this post by ${post.author} ?: ${config.site_author} ?: ${config.site_author}&body=${config.site_host}/${post.noExtensionUri} ?: ${post.uri}|" target="_blank" class="share-btn email">
+                                    <i class="fa fa-envelope"></i>
+
+                                </a></li></ul>
+
+                        <th:block th:fragment="disqus" th:if="${config.disqus_shortname}">
+                            <div id="disqus_thread"></div>
+                            <script th:inline="javascript">
+                                var disqus_shortname = /*[[${config.disqus_shortname}]]*/  'siddhesh';
+                                var disqus_config = function () {
+                                    this.page.url = /*[[${config.site_host+'/'+content.uri}]]*/ 'https://SiddheshRane.github.io/jbake-clean-blog-template/snippets.thyme';
+                                    this.page.identifier = /*[[${content.file}]]*/ 'snippets.thyme';
+                                };
+                                (function () { // DON'T EDIT BELOW THIS LINE
+                                    var d = document, s = d.createElement('script');
+                                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                        </th:block>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <script th:fragment="googleAnalytics" th:inline="javascript" th:if="${config.google_trackingID}">
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', /*[[${config.google_trackingID}]]*/ 'UA-100343123-2', 'auto');
+            ga('send', 'pageview');
+
+        </script>
         <footer th:fragment="footer">
             <div class="container">
                 <div class="row">

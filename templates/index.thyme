@@ -195,11 +195,13 @@
         <script src="../assets/vendor/jquery/jquery.min.js" th:src="|${content.rootpath}vendor/jquery/jquery.min.js|"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"th:src="|${content.rootpath}vendor/bootstrap/js/bootstrap.min.js|" ></script>
+        <script src="../assets/vendor/bootstrap/js/bootstrap.min.js" th:src="|${content.rootpath}vendor/bootstrap/js/bootstrap.min.js|" ></script>
 
         <!-- Theme JavaScript -->
         <script src="../assets/js/clean-blog.min.js" th:src="|${content.rootpath}js/clean-blog.min.js|"></script>
 
+        <script th:replace="snippets.thyme::googleAnalytics" />
+        
     </body>
 
 </html>

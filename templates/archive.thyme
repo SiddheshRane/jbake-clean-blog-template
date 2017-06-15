@@ -167,6 +167,7 @@
         <!-- Theme JavaScript -->
         <script src="../assets/js/clean-blog.min.js" th:src="|${content.rootpath}js/clean-blog.min.js|"></script>
 
+        <script th:replace="snippets.thyme::googleAnalytics" />
     </body>
 
 </html>

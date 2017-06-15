@@ -127,9 +127,9 @@
                 </div>
             </div>
         </article>
-
-        <hr>
-
+        <hr/>
+        <div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <th:block th:replace="snippets.thyme::disqus"></th:block></div></div></div>
         <!-- Footer -->
         <footer th:replace="snippets.thyme::footer">
             <div class="container">
@@ -175,6 +175,8 @@
 
         <!-- Theme JavaScript -->
         <script src="../assets/js/clean-blog.min.js" th:src="|${content.rootpath}js/clean-blog.min.js|"></script>
+
+        <script th:replace="snippets.thyme::googleAnalytics" />
 
     </body>
 

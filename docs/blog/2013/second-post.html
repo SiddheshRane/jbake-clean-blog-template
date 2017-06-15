@@ -2,10 +2,10 @@
 <html lang="en">
 
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
         <title>Second Post</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A blog about stuff that I do">
+        <meta name="description" content="Blog description">
         <meta name="author" content="Siddhesh Rane">
         <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
         <meta name="generator" content="JBake">
@@ -94,9 +94,24 @@
                 </div>
             </div>
         </article>
-
-        <hr>
-
+        <hr/>
+        <div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                            <div id="disqus_thread"></div>
+                            <script>
+                                var disqus_shortname = "siddhesh";
+                                var disqus_config = function () {
+                                    this.page.url = "https://SiddheshRane.github.io/jbake-clean-blog-template/blog/2013/second-post.html";
+                                    this.page.identifier = "./content/blog/2013/second-post.md";
+                                };
+                                (function () { // DON'T EDIT BELOW THIS LINE
+                                    var d = document, s = d.createElement('script');
+                                    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                            </script>
+                        </div></div></div>
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -150,6 +165,24 @@
 
         <!-- Theme JavaScript -->
         <script src="../../js/clean-blog.min.js"></script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', "UA-100343123-2", 'auto');
+            ga('send', 'pageview');
+
+        </script>
 
     </body>
 
