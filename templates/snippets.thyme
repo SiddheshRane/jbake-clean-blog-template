@@ -9,17 +9,23 @@
         <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
         <meta name="generator" content="JBake">
         
+        <!--Facebook Card-->
+		<meta property="og:type" content="article" />
+		<meta property="og:title"  content="Clean Blog" th:with="title=(${content.title} ?: ${config.site_title})" th:content="${title}" />
+		<meta property="og:description" content="A bootstrap based theme for your blog" th:content="${content.description} ?: ${config.site_description}"/>
+		<meta property="og:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/img/clean-blog-twitter-card.png"
+			  th:with="cover=(${content.shareimage} ?: (${content.coverimage} ?: 'img/yosemite.jpg'))"
+              th:content="|${config.site_host}/${cover}|" />
+        
         <!--Twitter card -->
         <th:block th:if="${config.twitter_username}">
         <meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="Clean Blog Template for JBake" th:with="title=(${content.title} ?: ${config.site_title})" th:content="${title}">
 		<meta name="twitter:creator" content="@unrealSiddhesh" th:content="'@'+${config.twitter_username}">
-		<meta name="twitter:description" content="A bootstrap based theme for your blog" th:content="${content.subtitle} ?: ${config.site_description}">
+		<meta name="twitter:description" content="A bootstrap based theme for your blog" th:content="${content.description} ?: ${config.site_description}">
 		<meta name="twitter:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/img/clean-blog-twitter-card.png"
-		      th:with="cover=(${content.coverimage} ?: 'img/yosemite.jpg'),
-		             postdir=${#strings.substringBefore(content.uri, '/')},
-        		     postdir=( ${postdir} ? ${postdir}+'/' : '')"
-              th:content="${config.site_host}+'/'+${postdir}+${cover}">
+		      th:with="cover=(${content.shareimage} ?: (${content.coverimage} ?: 'img/yosemite.jpg'))"
+              th:content="|${config.site_host}/${cover}|">
 		</th:if>
         <!-- Bootstrap Core CSS -->
         <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" th:href="|${content.rootpath}vendor/bootstrap/css/bootstrap.min.css|" rel="stylesheet">
@@ -58,7 +64,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" th:remove="all-but-first">
                         <li th:each="page : ${published_pages}">
-                            <a href="index.thyme" th:href="|${content.rootpath}${page.uri}|" th:text="${page.title}">Index</a>
+                            <a href="index.thyme" th:href="|${content.rootpath}${page.uri}|" th:text="${page.linktitle} ?: ${page.title}">Index</a>
                         </li>
                         <li>
                             <a href="page.thyme">Page</a>
