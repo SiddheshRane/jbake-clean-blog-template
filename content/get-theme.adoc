@@ -1,0 +1,1 @@
+/home/siddhesh/jbake-clean-blog-template/README.adoc
