@@ -8,13 +8,26 @@
         <meta name="author" content="" th:content="${content.author} ?: ${config.site_author}">
         <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
         <meta name="generator" content="JBake">
-
+        
+        <!--Twitter card -->
+        <th:block th:if="${config.twitter_username}">
+        <meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Clean Blog Template for JBake" th:with="title=(${content.title} ?: ${config.site_title})" th:content="${title}">
+		<meta name="twitter:creator" content="@unrealSiddhesh" th:content="'@'+${config.twitter_username}">
+		<meta name="twitter:description" content="A bootstrap based theme for your blog" th:content="${content.subtitle} ?: ${config.site_description}">
+		<meta name="twitter:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/img/clean-blog-twitter-card.png"
+		      th:with="cover=(${content.coverimage} ?: 'img/yosemite.jpg'),
+		             postdir=${#strings.substringBefore(content.uri, '/')},
+        		     postdir=( ${postdir} ? ${postdir}+'/' : '')"
+              th:content="${config.site_host}+'/'+${postdir}+${cover}">
+		</th:if>
         <!-- Bootstrap Core CSS -->
         <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" th:href="|${content.rootpath}vendor/bootstrap/css/bootstrap.min.css|" rel="stylesheet">
 
         <!-- Theme CSS -->
-        <link href="../assets/css/clean-blog.min.css" th:href="|${content.rootpath}css/clean-blog.min.css|" rel="stylesheet">
-
+        <link href="../assets/css/coderay.css" th:href="|${content.rootpath}css/coderay.css|" rel="stylesheet">
+        <link href="../assets/css/asciidoctor.css" th:href="|${content.rootpath}css/asciidoctor.css|" rel="stylesheet">
+        <link href="../assets/css/clean-blog.css" th:href="|${content.rootpath}css/clean-blog.css|" rel="stylesheet">
         <!-- Custom Fonts -->
         <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" th:href="|${content.rootpath}vendor/font-awesome/css/font-awesome.min.css|" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -26,7 +39,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <link th:with="rootpath=(${content.rootpath} ?: '' )" rel="shortcut icon" th:href="${rootpath}+'favicon.ico'"/>
+        <link th:with="rootpath=(${content.rootpath} ?: '' )" rel="shortcut icon" th:href="${rootpath}+'favicon.png'"/>
     </head>
 
     <body>

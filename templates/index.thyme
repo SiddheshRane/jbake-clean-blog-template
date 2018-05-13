@@ -98,7 +98,7 @@
                                 <h2 class="post-title" th:text='${post.title}'>
                                     Man must explore, and this is exploration at its greatest
                                 </h2>
-                                <h3 class="post-subtitle" th:if='${post.summary or post.description}' th:text='${post.summary} ?: ${post.description}'>
+                                <h3 class="post-subtitle" th:if='${post.subtitle}' th:text='${post.subtitle}'>
                                     Problems look mighty small from 150 miles up
                                 </h3>
                             </a>

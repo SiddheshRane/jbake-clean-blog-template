@@ -5,17 +5,26 @@
         <meta charset="utf-8">
         <title>Fourth Post</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Blog description">
+        <meta name="description" content="Bootstrap based template for JBake.">
         <meta name="author" content="Jonathan Bullock">
         <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
         <meta name="generator" content="JBake">
-
+        
+        <!--Twitter card -->
+        
+        <meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Fourth Post">
+		<meta name="twitter:creator" content="@unrealSiddhesh">
+		<meta name="twitter:description" content="Bootstrap based template for JBake.">
+		<meta name="twitter:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/blog/img/yosemite.jpg">
+		</th:if>
         <!-- Bootstrap Core CSS -->
         <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Theme CSS -->
-        <link href="../../css/clean-blog.min.css" rel="stylesheet">
-
+        <link href="../../css/coderay.css" rel="stylesheet">
+        <link href="../../css/asciidoctor.css" rel="stylesheet">
+        <link href="../../css/clean-blog.css" rel="stylesheet">
         <!-- Custom Fonts -->
         <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -27,7 +36,7 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <link rel="shortcut icon" href="../../favicon.ico"/>
+        <link rel="shortcut icon" href="../../favicon.png"/>
     </head>
 
     <body>
@@ -40,7 +49,7 @@
                         <span class="sr-only">Toggle navigation</span>
                         Menu <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="../../index.html">Clean blog</a>
+                    <a class="navbar-brand" href="../../index.html">Clean Blog</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,6 +79,7 @@
                             
                             <span class="meta">Posted by <b>Jonathan Bullock</b> on 
                                 October 17, 2013
+                                </br>
                                 <span> Tags: 
                                     <span> 
                                         <a href="../../tags/blog.html" class="" >blog</a></span><span> 
@@ -86,27 +96,17 @@
         <article>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://example.org" class="bare">http://example.org</a></p>
-</li>
-<li>
-<p><a href="http://example.org">Example.org</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu,
-mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo
-ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet
-ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus,
-id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In
-consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.</p>
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class="paragraph"> 
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel diam purus. Curabitur ut nisi lacus.</p> 
+</div> 
+<div class="ulist"> 
+ <ul> 
+  <li> <p><a href="http://example.org" class="bare">http://example.org</a></p> </li> 
+  <li> <p><a href="http://example.org">Example.org</a></p> </li> 
+ </ul> 
+</div> 
+<div class="paragraph"> 
+ <p>Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, mattis et imperdiet luctus, pulvinar vitae mi. Quisque fermentum sollicitudin feugiat. Mauris nec leo ligula. Vestibulum tristique odio ut risus ultricies a hendrerit quam iaculis. Duis tempor elit sit amet ligula vehicula et iaculis sem placerat. Fusce dictum, metus at volutpat lacinia, elit massa auctor risus, id auctor arcu enim eu augue. Donec ultrices turpis in mi imperdiet ac venenatis sapien sodales. In consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.</p> 
 </div></div>
                 </div>
             </div>
@@ -119,7 +119,7 @@ libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.</p>
                                 var disqus_shortname = "siddhesh";
                                 var disqus_config = function () {
                                     this.page.url = "https://SiddheshRane.github.io/jbake-clean-blog-template/blog/2013/fourth-post.html";
-                                    this.page.identifier = "./content/blog/2013/fourth-post.adoc";
+                                    this.page.identifier = "/home/siddhesh/jbake-clean-blog-template/content/blog/2013/fourth-post.adoc";
                                 };
                                 (function () { // DON'T EDIT BELOW THIS LINE
                                     var d = document, s = d.createElement('script');
@@ -168,7 +168,7 @@ libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.</p>
                                 </a>
                             </li>
                         </ul>
-                        <p class="copyright text-muted">&copy;  <span>Siddhesh Rane</span> <span>2017</span> | Clean Blog theme by <a href="https://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.5.1</span></a></p>
+                        <p class="copyright text-muted">&copy;  <span>Siddhesh Rane</span> <span>2018</span> | Clean Blog theme by <a href="https://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a> | Baked with <a href="http://jbake.org">JBake <span>v2.6.1</span></a></p>
                     </div>
                 </div>
             </div>

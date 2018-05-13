@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Clean blog</title>
+    <title>Clean Blog</title>
     <link>https://SiddheshRane.github.io/jbake-clean-blog-template</link>
     <atom:link href="https://SiddheshRane.github.io/jbake-clean-blog-template/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Blog description</description>
+    <description>Bootstrap based template for JBake.</description>
     <language>en-gb</language>
-    <pubDate>Thu, 15 Jun 2017 17:52:37 +0530</pubDate>
-    <lastBuildDate>Thu, 15 Jun 2017 17:52:37 +0530</lastBuildDate>
+    <pubDate>Sun, 13 May 2018 15:45:33 +0530</pubDate>
+    <lastBuildDate>Sun, 13 May 2018 15:45:33 +0530</lastBuildDate>
 
     <item>
       <title>Fourth Post</title>

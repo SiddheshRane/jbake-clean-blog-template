@@ -10,11 +10,15 @@ body {
 }
 p {
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 p a {
   text-decoration: underline;
 }
+
+pre { border:none; font-size:0.75em; overflow:auto; word-wrap: normal; white-space: pre}
+pre code { white-space: pre}
+
 h1,
 h2,
 h3,
@@ -159,6 +163,7 @@ hr.small {
 .intro-header .page-heading {
   padding: 100px 0 50px;
   color: white;
+  text-shadow: 0px 0px 14px #414141;  
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,

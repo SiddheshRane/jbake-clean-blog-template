@@ -62,17 +62,19 @@
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
         <header class="intro-header" style="background-image: url('../assets/img/yosemite.jpg'); background-color: #101010"
-                th:style="|background-image: url('${content.rootpath}img/yosemite.jpg') ; background-color:#101010|">
+                th:with="cover=(${content.coverimage} ?: ${content.rootpath}+'img/yosemite.jpg')"
+                th:style="|background-image: url('${cover}') ; background-color:#101010|">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="post-heading">
                             <h1 th:text='${content.title}'>Man must explore, and this is exploration at its greatest</h1>
-                            <h2 class="subheading" th:if='${content.summary or content.description}' th:text='${content.summary} ?: ${content.description}'>
+                            <h2 class="subheading" th:if='${content.subtitle}' th:text='${content.subtitle}'>
                                 Problems look mighty small from 150 miles up
                             </h2>
                             <span class="meta">Posted by <b th:text='${content.author} ?: ${config.site_author}'>Start Bootstrap</b> on 
                                 <span th:remove="tag" th:text='${#dates.format(content.date,"MMMM dd, yyyy")}'>June 12, 2017</span>
+                                </br>
                                 <span  th:if="${config.render_tags and content.tags}"> Tags: 
                                     <span th:each='tag : ${content.tags}'> 
                                         <a th:href="|${content.rootpath}${config.tag_path}/${tag}.html|" class="" th:text='${tag}' >tag</a></span> 
