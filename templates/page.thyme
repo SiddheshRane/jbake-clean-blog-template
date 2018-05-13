@@ -72,15 +72,16 @@
 
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url('../assets/img/storm.jpg'); background-color:#101010"
-                th:style="|background-image: url('${content.rootpath}img/storm.jpg' ) ; background-color:#101010|">
+        <header class="intro-header" style="background-image: url('../assets/img/page-cover.jpg'); background-color:#101010"
+                th:with="cover=(${content.coverimage} ?: 'img/page-cover.jpg')"
+                th:style="|background-image: url('${content.rootpath}${cover}') ; background-color:#101010|">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="page-heading">
                             <h1 th:text="${content.title}">Your Page Title</h1>
                             <hr class="small">
-                            <span class="subheading" th:if="${content.summary}">Summary if any</span>
+                            <span class="subheading" th:if="${content.description}" th:text="${content.description}">Description, if any</span>
                         </div>
                     </div>
                 </div>

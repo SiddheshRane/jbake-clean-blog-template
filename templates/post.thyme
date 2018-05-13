@@ -61,9 +61,9 @@
 
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url('../assets/img/yosemite.jpg'); background-color: #101010"
-                th:with="cover=(${content.coverimage} ?: ${content.rootpath}+'img/yosemite.jpg')"
-                th:style="|background-image: url('${cover}') ; background-color:#101010|">
+        <header class="intro-header" style="background-image: url('../assets/img/index-cover.jpg'); background-color: #101010"
+                th:with="cover=(${content.coverimage} ?: 'img/index-cover.jpg')"
+                th:style="|background-image: url('${content.rootpath}${cover}') ; background-color:#101010|">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

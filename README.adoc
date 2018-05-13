@@ -1,13 +1,15 @@
-= Get Theme
+= Clean Blog
 Siddhesh Rane
 2018-05-13
 :jbake-type: page
 :jbake-status: published
 :jbake-tags: jbake
+:jbake-linktitle: Get Theme
+:jbake-shareimage: img/clean-blog-share-card.png
+:jbake-coverimage: img/tags-cover.jpg
+:jbake-description: Write in AsciiDoc. Publish with JBake
 :idprefix:
 :icons: font
-
-= Clean Blog Template 
 
 A port of Clean Blog by Start Bootstrap for JBake.
 
@@ -19,7 +21,7 @@ A port of Clean Blog by Start Bootstrap for JBake.
 - `coverimage` per post to change background
 - Navbar **auto lists `pages`** using `page.title` and `page.uri`
 - **Disqus** comments and **Google Analytics**
-- Share your blog on Twitter with clickable image link using **Twitter Cards**
+- Share your blog on Twitter and Facebook with clickable image link using **Twitter Cards** and **Facebook Cards**
 - **Github**, **Twitter**, **Linkedin** links at the footer
 - **Tag list** with links to tag page in index and post
 - Uses thymeleaf the way it was intended to be used. This means you can **preview** the theme even **before baking** it

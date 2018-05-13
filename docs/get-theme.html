@@ -3,20 +3,26 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Get Theme</title>
+        <title>Clean Blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Bootstrap based template for JBake.">
+        <meta name="description" content="Write in AsciiDoc. Publish with JBake">
         <meta name="author" content="Siddhesh Rane">
         <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
         <meta name="generator" content="JBake">
         
+        <!--Facebook Card-->
+		<meta property="og:type" content="article" />
+		<meta property="og:title"  content="Clean Blog" />
+		<meta property="og:description" content="Write in AsciiDoc. Publish with JBake"/>
+		<meta property="og:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/img/clean-blog-share-card.png" />
+        
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="Get Theme">
+		<meta name="twitter:title" content="Clean Blog">
 		<meta name="twitter:creator" content="@unrealSiddhesh">
-		<meta name="twitter:description" content="Bootstrap based template for JBake.">
-		<meta name="twitter:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/img/yosemite.jpg">
+		<meta name="twitter:description" content="Write in AsciiDoc. Publish with JBake">
+		<meta name="twitter:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/img/clean-blog-share-card.png">
 		</th:if>
         <!-- Bootstrap Core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -74,14 +80,14 @@
 
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url(&#39;img/storm.jpg&#39; ) ; background-color:#101010">
+        <header class="intro-header" style="background-image: url(&#39;img/tags-cover.jpg&#39;) ; background-color:#101010">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="page-heading">
-                            <h1>Get Theme</h1>
+                            <h1>Clean Blog</h1>
                             <hr class="small">
-                            
+                            <span class="subheading">Write in AsciiDoc. Publish with JBake</span>
                         </div>
                     </div>
                 </div>
@@ -91,9 +97,12 @@
         <!-- Main Content -->
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><h1 id="clean_blog_template" class="sect0">Clean Blog Template</h1> 
-<div class="paragraph"> 
- <p>A port of Clean Blog by Start Bootstrap for JBake.</p> 
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div id="preamble"> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>A port of Clean Blog by Start Bootstrap for JBake.</p> 
+  </div> 
+ </div> 
 </div> 
 <div class="sect1"> 
  <h2 id="features">Features</h2> 
@@ -105,7 +114,7 @@
     <li> <p><code>coverimage</code> per post to change background</p> </li> 
     <li> <p>Navbar <strong>auto lists <code>pages</code></strong> using <code>page.title</code> and <code>page.uri</code></p> </li> 
     <li> <p><strong>Disqus</strong> comments and <strong>Google Analytics</strong></p> </li> 
-    <li> <p>Share your blog on Twitter with clickable image link using <strong>Twitter Cards</strong></p> </li> 
+    <li> <p>Share your blog on Twitter and Facebook with clickable image link using <strong>Twitter Cards</strong> and <strong>Facebook Cards</strong></p> </li> 
     <li> <p><strong>Github</strong>, <strong>Twitter</strong>, <strong>Linkedin</strong> links at the footer</p> </li> 
     <li> <p><strong>Tag list</strong> with links to tag page in index and post</p> </li> 
     <li> <p>Uses thymeleaf the way it was intended to be used. This means you can <strong>preview</strong> the theme even <strong>before baking</strong> it</p> </li> 

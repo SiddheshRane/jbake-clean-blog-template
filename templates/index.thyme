@@ -72,8 +72,8 @@
 
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url('../assets/img/yosemite.jpg') ; background-color: #101010" 
-                th:style="|background-image: url('${content.rootpath}img/yosemite.jpg') ; background-color:#101010|">
+        <header class="intro-header" style="background-image: url('../assets/img/index-cover.jpg') ; background-color: #101010" 
+                th:style="|background-image: url('${content.rootpath}img/index-cover.jpg') ; background-color:#101010|">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -98,7 +98,7 @@
                                 <h2 class="post-title" th:text='${post.title}'>
                                     Man must explore, and this is exploration at its greatest
                                 </h2>
-                                <h3 class="post-subtitle" th:if='${post.subtitle}' th:text='${post.subtitle}'>
+                                <h3 class="post-subtitle" th:if='${post.description}' th:text='${post.description}'>
                                     Problems look mighty small from 150 miles up
                                 </h3>
                             </a>

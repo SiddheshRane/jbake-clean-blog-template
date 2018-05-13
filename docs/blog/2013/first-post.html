@@ -10,13 +10,19 @@
         <!--<meta name="keywords" content="" th:if="${content.tags != null}" th:content="${#strings.listJoin(content.tags, ' , ')} ?: '' ">-->
         <meta name="generator" content="JBake">
         
+        <!--Facebook Card-->
+		<meta property="og:type" content="article" />
+		<meta property="og:title"  content="First Post" />
+		<meta property="og:description" content="Bootstrap based template for JBake."/>
+		<meta property="og:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/img/yosemite.jpg" />
+        
         <!--Twitter card -->
         
         <meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="First Post">
 		<meta name="twitter:creator" content="@unrealSiddhesh">
 		<meta name="twitter:description" content="Bootstrap based template for JBake.">
-		<meta name="twitter:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/blog/img/yosemite.jpg">
+		<meta name="twitter:image" content="https://SiddheshRane.github.io/jbake-clean-blog-template/img/yosemite.jpg">
 		</th:if>
         <!-- Bootstrap Core CSS -->
         <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -73,7 +79,7 @@
 
         <!-- Page Header -->
         <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url(&#39;../../img/yosemite.jpg&#39;) ; background-color:#101010">
+        <header class="intro-header" style="background-image: url(&#39;../../img/index-cover.jpg&#39;) ; background-color:#101010">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
