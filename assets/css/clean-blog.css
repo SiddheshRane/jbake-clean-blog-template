@@ -5,7 +5,7 @@
  */
 body {
   font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #333333;
 }
 p {
@@ -196,6 +196,8 @@ hr.small {
     font-size: 80px;
   }
 }
+.intro-header .site-heading h1 { font-family:'Lato', sans-serif; font-weight:300}
+
 .intro-header .post-heading h1 {
   font-size: 35px;
 }

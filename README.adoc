@@ -11,7 +11,7 @@ Siddhesh Rane
 :idprefix:
 :icons: font
 
-A port of Clean Blog by Start Bootstrap for JBake.
+A port of https://startbootstrap.com/template-overviews/clean-blog[Clean Blog by Start Bootstrap] for JBake.
 
 == Features
 
